@@ -1,0 +1,40 @@
+/**
+ * Style cho component button
+ * Author: Jocelyn
+ * Email: duong.huan2122000@gmail.com
+ * Github: https://github.com/duonghuan2122000
+ * CreatedDate: 27/06/2021
+ */
+
+$button-class-name: "h-button" !default; // tên class cho button
+$button-border-color: #f1f1f1; // màu viền của button
+$button-border-radius: 4px;
+$button-padding-horizontally: 16px;
+$button-padding-vertically: 8px;
+
+$button-primary-class-name: "is-primary"; // tên class cho button primary
+$button-primary-background-color: #00d1b2; // background color primary của button
+$button-primary-hover-background-color: #00c4a7; // background color primary khi hover của button
+$button-primary-color: #ffffff; // màu chữ primary của button
+$button-primary-hover-color: #ffffff; // màu chữ primary khi hover của button
+
+.#{$button-class-name} {
+	display: inline-block;
+	border: 1px solid $button-border-color;
+	border-radius: $button-border-radius;
+	padding: $button-padding-vertically $button-padding-horizontally;
+	text-decoration: none;
+	cursor: pointer;
+	transition: background 0.3s;
+
+	&.#{$button-primary-class-name} {
+		background-color: $button-primary-background-color;
+		color: $button-primary-color;
+
+		&:hover,
+		&:focus {
+			background-color: $button-primary-hover-background-color;
+			color: $button-primary-hover-color;
+		}
+	}
+}
