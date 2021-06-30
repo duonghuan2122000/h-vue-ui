@@ -4,9 +4,7 @@ name: Deploy app to Github Pages
 
 # Cấu hình workflow
 on:
-  # Trigger event khi có push hoặc pull_request tới nhánh develop
-  push:
-    branches: [ develop ]
+  # Trigger event khi có pull_request tới nhánh develop
   pull_request:
     branches: [ develop ]
 
