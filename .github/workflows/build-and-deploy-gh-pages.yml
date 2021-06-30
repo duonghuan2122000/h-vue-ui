@@ -1,0 +1,37 @@
+# Đây là action để build và deploy tự động app lên github pages
+
+name: Deploy app to Github Pages
+
+# Cấu hình workflow
+on:
+  # Trigger event khi có push hoặc pull_request tới nhánh develop
+  push:
+    branches: [ develop ]
+  pull_request:
+    branches: [ develop ]
+
+# jobs của workflow
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # môi trường job sẽ chạy
+    runs-on: ubuntu-latest
+
+    # các bước thực hiện của workflow
+    steps:
+      # checkout code
+      - uses: actions/checkout@v2
+
+      # Build vue
+      - name: Build
+        run: |
+          npm install
+          npm run build
+      
+      # deploy lên github pages
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: dist # The folder the action should deploy.
+          
