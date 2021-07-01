@@ -1,0 +1,36 @@
+/**
+ * Style cho component input
+ * CreatedBy: dbhuan (01/07/2021)
+ */
+
+$input-class-name: "h-input"; // tên class cho input
+$input-height: 32px; // chiều cao input
+$input-border-color: #ccc; // màu viền input
+$input-border-radius: 4px; // độ bo tròn input
+$input-font-size: 14px; // cỡ chữ input
+$input-padding-horizontally: 12px;
+$input-padding-vertically: 0px;
+
+$input-focus-border-color: #00d1b2; // màu viền của input khi focus
+
+$input-error-class-name: "has-error"; // tên class input khi lỗi.
+$input-error-border-color: #f14668; // màu viền của input khi lỗi
+
+.#{$input-class-name} {
+  height: $input-height;
+  outline: none;
+  border: 1px solid $input-border-color;
+  border-radius: $input-border-radius;
+  font-size: $input-font-size;
+  padding: $input-padding-vertically $input-padding-horizontally;
+  width: 100%;
+
+  &:focus,
+  &:hover {
+    border-color: $input-focus-border-color;
+  }
+
+  &.#{$input-error-class-name} {
+    border-color: $input-error-border-color;
+  }
+}
