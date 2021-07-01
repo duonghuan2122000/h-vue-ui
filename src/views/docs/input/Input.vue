@@ -15,9 +15,9 @@
       <tbody>
         <tr>
           <td>placeholder</td>
-          <th>string</th>
-          <th>null</th>
-          <th>Text hint của input</th>
+          <td>string</td>
+          <td>null</td>
+          <td>Text hint của input</td>
         </tr>
         <tr>
           <td>hasError</td>
