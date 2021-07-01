@@ -25,18 +25,6 @@ const routes = [
         name: "input",
         component: () => import("@/views/docs/input/Input.vue"),
       },
-      {
-        // dropdown component
-        path: "dropdown",
-        name: "dropdown",
-        component: () => import("@/views/docs/dropdown/Dropdown.vue"),
-      },
-      {
-        // tooltip component
-        path: "tooltip",
-        name: "tooltip",
-        component: () => import("@/views/docs/tooltip/Tooltip.vue"),
-      },
     ],
   },
 ];

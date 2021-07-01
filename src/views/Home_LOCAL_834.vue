@@ -9,8 +9,5 @@
     <div>
       <router-link to="/docs/dropdown">Dropdown</router-link>
     </div>
-    <div>
-      <router-link to="/docs/tooltip">Tooltip</router-link>
-    </div>
   </div>
 </template>

@@ -1,0 +1,55 @@
+/**
+ * Style cho component dropdown
+ * CreatedBy: dbhuan (01/07/2021)
+ */
+
+$dropdown-class-name: "h-dropdown"; // tên class cho dropdown container
+
+$dropdown-toggle-class-name: "h-dropdown-toggle"; // tên class cho dropdown toggle
+
+$dropdown-content-class-name: "h-dropdown-content"; // tên class cho dropdown content
+
+$dropdown-item-class-name: "h-dropdown-item"; // tên class item dropdown
+$dropdown-item-height: 40px; // chiều cao item dropdown
+$dropdown-item-padding-horizontally: 12px; // padding chiều ngang của item dropdown
+$dropdown-item-padding-vertically: 0; // padding chiều dọc của item dropdown
+$dropdown-item-hover-background-color: #00d1b2; // màu nền của item dropdown khi hover, focus.
+$dropdown-item-hover-color: #fff; // màu của item dropdown khi hover, focus.
+
+.#{$dropdown-class-name} {
+  position: relative;
+  display: inline-block;
+
+  .#{$dropdown-toggle-class-name} {
+    cursor: pointer;
+  }
+
+  .#{$dropdown-content-class-name} {
+    position: absolute;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 100%;
+    min-width: 100%;
+    transition: height 0.3s;
+
+    .#{$dropdown-item-class-name} {
+      height: $dropdown-item-height;
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+      padding: $dropdown-item-padding-vertically
+        $dropdown-item-padding-horizontally;
+      cursor: pointer;
+
+      &:hover {
+          background-color: $dropdown-item-hover-background-color;
+          color: $dropdown-item-hover-color;
+      }
+    }
+
+    &.hide {
+      display: none;
+      height: 0;
+    }
+  }
+}
