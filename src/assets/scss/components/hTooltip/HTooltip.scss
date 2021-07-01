@@ -1,0 +1,35 @@
+/**
+ * Style cho component tooltip
+ * CreatedBy: dbhuan (01/07/2021)
+ */
+
+$tooltip-class-name: "h-tooltip"; // tên class của containter tooltip
+
+$tooltip-text-class-name: "h-tooltiptext"; // tên class của element tooltip text
+$tooltip-text-padding-horizontally: 12px; // padding chiều ngang của tooltip text
+$tooltip-text-padding-vertically: 4px; // padding chiều dọc của tooltip text
+$tooltip-text-border-radius: 4px; // bo tròn của tooltip text
+$tooltip-text-color: #fff; // màu của tooltip text
+$tooltip-text-background-color: #000; // màu nền của tooltip text
+
+.#{$tooltip-class-name} {
+  position: relative;
+
+  .#{$tooltip-text-class-name} {
+    display: block;
+    visibility: hidden;
+    white-space: nowrap;
+    background-color: $tooltip-text-background-color;
+    color: $tooltip-text-color;
+    text-align: center;
+    border-radius: $tooltip-text-border-radius;
+    position: absolute;
+    z-index: 1;
+    padding: $tooltip-text-padding-vertically $tooltip-text-padding-horizontally;
+    inset: auto auto auto 0;
+  }
+
+  &:hover .#{$tooltip-text-class-name} {
+    visibility: visible;
+  }
+}

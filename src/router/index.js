@@ -25,6 +25,12 @@ const routes = [
         name: "input",
         component: () => import("@/views/docs/input/Input.vue"),
       },
+      {
+        // tooltip component
+        path: "tooltip",
+        name: "tooltip",
+        component: () => import("@/views/docs/tooltip/Tooltip.vue"),
+      },
     ],
   },
 ];
