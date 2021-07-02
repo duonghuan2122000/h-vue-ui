@@ -1,0 +1,43 @@
+/**
+ * Style flexbox
+ * CreatedBy: dbhuan (02/07/2021)
+ */
+
+@mixin justify-content-mixin($positions...) {
+  @for $i from 0 to length($positions) {
+    &.is-justify-content-#{nth($positions, $i + 1)} {
+      justify-content: nth($positions, $i + 1);
+    }
+  }
+}
+@mixin align-items-mixin($positions...) {
+  @for $i from 0 to length($positions) {
+    &.is-align-items-#{nth($positions, $i + 1)} {
+      align-items: nth($positions, $i + 1);
+    }
+  }
+}
+
+@mixin position-flexbox {
+  @include justify-content-mixin(
+    flex-start,
+    flex-end,
+    center,
+    space-between,
+    space-around,
+    space-evenly
+  );
+  @include align-items-mixin(center, flex-start, flex-end, baseline);
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  @include position-flexbox();
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  @include position-flexbox();
+}
