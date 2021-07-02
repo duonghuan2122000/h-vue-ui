@@ -6,16 +6,16 @@
  * CreatedDate: 27/06/2021
  */
 
-html, 
+html,
 body {
-    padding: 0;
-    margin: 0;
-    font-size: 16px;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
 }
 
 * {
-    box-sizing: border-box;
-    font-size: inherit;
+  box-sizing: border-box;
+  font-size: inherit;
 }
 
 /**
@@ -23,3 +23,9 @@ body {
  * CreatedBy: dbhuan (02/07/2021)
  */
 @import "../utilities/flexbox.scss";
+
+/**
+ * Thêm spacer (padding và margin) vào base
+ * CreatedBy: dbhuan (02/07/2021)
+ */
+@import "../utilities/spacer.scss";
