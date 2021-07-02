@@ -17,3 +17,9 @@ body {
     box-sizing: border-box;
     font-size: inherit;
 }
+
+/**
+ * Thêm flexbox vào base
+ * CreatedBy: dbhuan (02/07/2021)
+ */
+@import "../utilities/flexbox.scss";
