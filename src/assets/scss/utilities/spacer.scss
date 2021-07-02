@@ -1,0 +1,63 @@
+/**
+ * Spacer style
+ * CreatedBy: dbhuan (02/07/2021)
+ */
+
+@mixin padding-mixin($spacers...) {
+    @for $i from 0 to length($spacers) {
+        .pt-#{$i} {
+            padding-top: nth($spacers, $i + 1);
+        }
+        .pb-#{$i} {
+            padding-bottom: nth($spacers, $i + 1);
+        }
+        .pl-#{$i} {
+            padding-left: nth($spacers, $i + 1);
+        }
+        .pr-#{$i} {
+            padding-right: nth($spacers, $i + 1);
+        }
+        .px-#{$i} {
+            padding-left: nth($spacers, $i + 1);
+            padding-right: nth($spacers, $i + 1);
+        }
+        .py-#{$i} {
+            padding-top: nth($spacers, $i + 1);
+            padding-bottom: nth($spacers, $i + 1);
+        }
+        .p-#{$i} {
+            padding: nth($spacers, $i + 1);
+        }
+    }
+}
+
+@mixin margin-mixin($spacers...) {
+    @for $i from 0 to length($spacers) {
+        .mt-#{$i} {
+            margin-top: nth($spacers, $i + 1);
+        }
+        .mb-#{$i} {
+            margin-bottom: nth($spacers, $i + 1);
+        }
+        .ml-#{$i} {
+            margin-left: nth($spacers, $i + 1);
+        }
+        .mr-#{$i} {
+            margin-right: nth($spacers, $i + 1);
+        }
+        .mx-#{$i} {
+            margin-left: nth($spacers, $i + 1);
+            margin-right: nth($spacers, $i + 1);
+        }
+        .my-#{$i} {
+            margin-top: nth($spacers, $i + 1);
+            margin-bottom: nth($spacers, $i + 1);
+        }
+        .m-#{$i} {
+            margin: nth($spacers, $i + 1);
+        }
+    }
+}
+
+@include padding-mixin(0, 8px, 16px);
+@include margin-mixin(0, 8px, 16px);
