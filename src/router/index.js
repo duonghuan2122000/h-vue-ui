@@ -26,6 +26,12 @@ const routes = [
         component: () => import("@/views/docs/input/Input.vue"),
       },
       {
+        // checkbox component
+        path: "checkbox",
+        name: "checkbox",
+        component: () => import("@/views/docs/checkbox/Checkbox.vue"),
+      },
+      {
         // dropdown component
         path: "dropdown",
         name: "dropdown",

@@ -1,0 +1,62 @@
+/**
+ * Style cho component checkbox
+ * CreatedBy: dbhuan (02/07/2021)
+ */
+
+$checkbox-class-name: "h-checkbox"; // tên class cho checkbox
+$checkbox-size: 16px; // kích thước của checkbox
+$checkbox-border-radius: 4px; // bo tròn của checkbox
+$checkbox-background-color: #eee; // màu nền của checkbox
+$checkbox-border-color: #ccc; // màu viền của checkbox
+$checkbox-hover-background-color: #f1f1f1; // màu nền của checkbox khi hover
+$checkbox-active-background-color: #00d1b2; // màu nên của checkbox khi active
+
+.#{$checkbox-class-name} {
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+
+  .h-label {
+      margin-left: $checkbox-size + 4px;
+  }
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+
+    &:checked + .h-checkmark {
+      background-color: $checkbox-active-background-color;
+
+    //   &::after {
+    //     display: block;
+    //   }
+    }
+  }
+
+  .h-checkmark {
+    position: absolute;
+    inset: 0 auto auto 0;
+    height: $checkbox-size;
+    width: $checkbox-size;
+    border-radius: $checkbox-border-radius;
+    background-color: $checkbox-background-color;
+    border: 1px solid $checkbox-border-color;
+
+    // &::after {
+    //   content: "";
+    //   position: absolute;
+    //   display: none;
+    //   inset: 0 auto auto 0;
+    //   height: $checkbox-size;
+    //   width: $checkbox-size;
+    //   background-color: red;
+    // }
+  }
+
+  &:hover .h-checkmark {
+    background-color: $checkbox-hover-background-color;
+  }
+}
