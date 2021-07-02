@@ -12,6 +12,7 @@ $checkbox-hover-background-color: #f1f1f1; // màu nền của checkbox khi hove
 $checkbox-active-background-color: #00d1b2; // màu nên của checkbox khi active
 
 .#{$checkbox-class-name} {
+  position: relative;
   display: inline-block;
   cursor: pointer;
   user-select: none;

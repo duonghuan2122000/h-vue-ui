@@ -1,22 +1,38 @@
 <template>
-  <label class="h-checkbox flex-row is-align-items-center">
-    <span class="h-label">{{ label }}</span>
-    <input type="checkbox" />
-    <span class="h-checkmark"></span>
-  </label>
+  <div v-if="data && data.length > 0">
+    <checkbox
+      v-for="(item, index) in data"
+      :key="index"
+      class="mx-1"
+      :label="item[displayField]"
+    />
+  </div>
 </template>
 
 <script>
+import Checkbox from "./Checkbox.vue";
 export default {
   name: "HCheckbox",
+  components: {
+    Checkbox,
+  },
   props: {
-    label: {
+    /**
+     * Data list checkbox
+     * CreatedBy: dbhuan (02/07/2021)
+     */
+    data: {
+      type: Array,
+    },
+
+    /**
+     * Trường trong data dùng làm label hiển thị cho checkbox
+     * CreatedBy: dbhuan (02/07/2021)
+     */
+    displayField: {
       type: String,
+      default: "label",
     },
   },
 };
 </script>
-
-<style lang="scss" scoped>
-@import "@/assets/scss/components/hCheckbox/HCheckbox.scss";
-</style>
