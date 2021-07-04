@@ -1,7 +1,11 @@
 <template>
-  <div>
-    <h-input placeholder="Text hint" />
-    <h-input placeholder="Text hint" :hasError="true" />
+  <div class="p-2">
+    <h-input class="mt-1" placeholder="Text hint" />
+    <h-input class="mt-1" placeholder="Text hint" :hasError="true" />
+
+    <pre class="my-1">
+&lt;h-input placeholder="Text hint" /&gt;
+&lt;h-input placeholder="Text hint" :hasError="true" /&gt;</pre>
 
     <table border="1">
       <thead>
