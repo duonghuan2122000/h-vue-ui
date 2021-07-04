@@ -8,14 +8,14 @@
 
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-size: 16px;
+	padding: 0;
+	margin: 0;
+	font-size: 16px;
 }
 
 * {
-  box-sizing: border-box;
-  font-size: inherit;
+	box-sizing: border-box;
+	font-size: inherit;
 }
 
 /**
@@ -29,3 +29,9 @@ body {
  * CreatedBy: dbhuan (02/07/2021)
  */
 @import "../utilities/spacer.scss";
+
+/**
+ * Thêm highlight code vào base
+ * @author CreatedBy: dbhuan (04/07/2021)
+ */
+@import "../utilities/highlight.scss";

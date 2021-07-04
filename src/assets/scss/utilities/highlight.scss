@@ -1,0 +1,21 @@
+/**
+ * Style cho highlight code
+ * @author CreatedBy: dbhuan (04/07/2021)
+ */
+
+$highlight-background-color: #f1f1f1;
+$highlight-padding: 8px;
+$highlight-border-color: #ccc;
+$highlight-border-left-color: #1565c0;
+$highlight-border-radius: 4px;
+
+pre {
+	font-family: "Menlo, Consolas, monospace";
+	margin: 0;
+	overflow: auto;
+	background-color: $highlight-background-color;
+	padding: $highlight-padding;
+	border: 1px solid $highlight-border-color;
+	border-left: 6px solid $highlight-border-left-color;
+	border-radius: 0 $highlight-border-radius $highlight-border-radius 0;
+}

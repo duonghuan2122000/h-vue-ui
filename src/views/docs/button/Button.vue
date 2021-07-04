@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="p-2">
     <div>Button component</div>
     <h-button text="Button" />
 
@@ -11,9 +11,15 @@
     <h-button type="success" text="Button" />
     <h-button type="secondary" text="Button" />
 
-    <div>
-      Các props:
-    </div>
+    <pre class="my-1">
+        &lt;h-button type="primary" text="Button" /&gt;
+        &lt;h-button type="danger" text="Button" /&gt;
+        &lt;h-button type="warning" text="Button" /&gt;
+        &lt;h-button type="success" text="Button" /&gt;
+        &lt;h-button type="secondary" text="Button" /&gt;</pre
+    >
+
+    <div>Các props:</div>
     <table border="1">
       <thead>
         <th>Tên prop</th>
@@ -34,11 +40,13 @@
           <td>type</td>
           <td>string</td>
           <td>primary</td>
-          <td>Loại button. Gồm các giá trị: primary (default), secondary, success, warning và danger</td>
+          <td>
+            Loại button. Gồm các giá trị: primary (default), secondary, success,
+            warning và danger
+          </td>
         </tr>
       </tbody>
     </table>
-
   </div>
 </template>
 
