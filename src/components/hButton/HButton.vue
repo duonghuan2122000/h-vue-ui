@@ -1,5 +1,7 @@
 <template>
-  <button class="h-button" :class="'is-' + type">{{ text }}</button>
+  <button class="h-button" :class="'is-' + type" v-on="listener">
+    {{ text }}
+  </button>
 </template>
 
 <script>
@@ -28,6 +30,20 @@ export default {
     text: {
       type: String,
       default: () => "",
+    },
+  },
+  computed: {
+    /**
+     * Các event của button component
+     * @author CreatedBy: dbhuan (15/07/2021)
+     */
+    listener: function () {
+      let _this = this;
+      return {
+        click: function () {
+          _this.$emit("click");
+        },
+      };
     },
   },
 };
