@@ -1,0 +1,41 @@
+/**
+ * Style cho component Notification
+ * Author: Jocelyn
+ * Email: duong.huan2122000@gmail.com
+ * Github: https://github.com/duonghuan2122000
+ * CreatedDate: 15/07/2021
+ */
+
+$notification-class-name: 'h-notification'; // tên class cho notification container
+$notification-background-color: red; // màu nền của notification
+$notification-position: 16px 16px auto auto; // vị trí của notification
+$notification-padding: 8px 12px; // padding của notification
+$notification-border-radius: 4px; // độ bo tròn của notification
+$notification-color: #fff; // màu chữ của notification
+$notification-max-width: 300px; // độ rộng tối đa của notification
+
+$notification-close-button-class-name: 'h-notification-close-button'; // tên class button close notification
+
+.#{$notification-class-name} {
+    position: fixed;
+    background-color: $notification-background-color;
+    inset: $notification-position;
+    padding: $notification-padding;
+    border-radius: $notification-border-radius;
+    color: $notification-color;
+    z-index: 100;
+    max-width: $notification-max-width;
+
+    &.hide {
+        display: none;
+    }
+
+    .#{$notification-close-button-class-name} {
+        border-radius: 50%;
+        background-color: rgb(158, 1, 1);
+        height: 18px;
+        width: 18px;
+        cursor: pointer;
+        user-select: none;
+    }
+}

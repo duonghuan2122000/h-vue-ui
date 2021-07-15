@@ -44,6 +44,12 @@ const routes = [
         component: () => import("@/views/docs/tooltip/Tooltip.vue"),
       },
       {
+        // notification component
+        path: 'notification',
+        name: 'notification',
+        component: () => import('@/views/docs/notification/Notification.vue')
+      },
+      {
         // util component
         path: "util",
         name: "util",
