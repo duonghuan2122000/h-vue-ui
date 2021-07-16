@@ -22,10 +22,12 @@
     <div>Các props:</div>
     <table border="1">
       <thead>
-        <th>Tên prop</th>
-        <th>Kiểu dữ liệu</th>
-        <th>Giá trị mặc định</th>
-        <th>Mô tả</th>
+        <tr>
+          <th>Tên prop</th>
+          <th>Kiểu dữ liệu</th>
+          <th>Giá trị mặc định</th>
+          <th>Mô tả</th>
+        </tr>
       </thead>
 
       <tbody>
