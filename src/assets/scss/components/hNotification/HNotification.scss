@@ -5,8 +5,9 @@
  * Github: https://github.com/duonghuan2122000
  * CreatedDate: 15/07/2021
  */
+@import "../../utilities/variables";
 
-$notification-class-name: 'h-notification'; // tên class cho notification container
+$notification-class-name: "h-notification"; // tên class cho notification container
 $notification-background-color: red; // màu nền của notification
 $notification-position: 16px 16px auto auto; // vị trí của notification
 $notification-padding: 8px 12px; // padding của notification
@@ -14,28 +15,58 @@ $notification-border-radius: 4px; // độ bo tròn của notification
 $notification-color: #fff; // màu chữ của notification
 $notification-max-width: 300px; // độ rộng tối đa của notification
 
-$notification-close-button-class-name: 'h-notification-close-button'; // tên class button close notification
+$notification-close-button-class-name: "h-notification-close-button"; // tên class button close notification
+
+// các loại notification
+$notification-types: (
+	"primary": $color-primary,
+	"success": $color-success,
+	"warning": $color-warning,
+	"danger": $color-danger,
+);
+
+@mixin notification-type-mixin($types...) {
+	@for $i from 0 to length(types) {
+		&.is-#{nth($types, $i + 1)} {
+			background-color: map.get($notification-types, nth($types, $i + 1));
+
+			.#{$notification-close-button-class-name} {
+				border-radius: 50%;
+				background-color: #fff;
+				height: 18px;
+				width: 18px;
+				cursor: pointer;
+				user-select: none;
+				color: map.get($notification-types, nth($types, $i + 1));
+				font-weight: bold;
+			}
+		}
+	}
+}
 
 .#{$notification-class-name} {
-    position: fixed;
-    background-color: $notification-background-color;
-    inset: $notification-position;
-    padding: $notification-padding;
-    border-radius: $notification-border-radius;
-    color: $notification-color;
-    z-index: 100;
-    max-width: $notification-max-width;
+	position: fixed;
+	inset: $notification-position;
+	padding: $notification-padding;
+	border-radius: $notification-border-radius;
+	color: $notification-color;
+	z-index: 100;
+	max-width: $notification-max-width;
 
-    &.hide {
-        display: none;
-    }
+    @each $type, $color in $notification-types {
+        &.is-#{$type} {
+			background-color: $color;
 
-    .#{$notification-close-button-class-name} {
-        border-radius: 50%;
-        background-color: rgb(158, 1, 1);
-        height: 18px;
-        width: 18px;
-        cursor: pointer;
-        user-select: none;
+			.#{$notification-close-button-class-name} {
+				border-radius: 50%;
+				background-color: #fff;
+				height: 18px;
+				width: 18px;
+				cursor: pointer;
+				user-select: none;
+				color: $color;
+				font-weight: bold;
+			}
+		}
     }
 }

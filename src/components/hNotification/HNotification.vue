@@ -1,5 +1,5 @@
 <template>
-  <div class="h-notification flex-row" :class="{ hide: !show }">
+  <div class="h-notification flex-row" :class="'is-' + type">
     <div>
       {{ text }}
     </div>
@@ -10,9 +10,9 @@
         flex-row
         is-justify-content-center is-align-items-center
       "
-      @click="hideNotification"
+      @click="closeNotification"
     >
-      x
+      &times;
     </div>
   </div>
 </template>
@@ -27,6 +27,19 @@ export default {
      */
     text: {
       type: String,
+    },
+
+    /**
+     * Loại notification (Background color của notification).
+     * Hỗ trợ: primary (default), danger, success, warning, secondary
+     * @author
+     * CreatedBy: dbhuan (29/06/2021)
+     */
+    type: {
+      type: String,
+      default: "primary",
+      validator: (val) =>
+        ["primary", "danger", "success", "warning"].includes(val),
     },
 
     /**
@@ -48,21 +61,15 @@ export default {
       type: Boolean,
       default: true,
     },
-
-    /**
-     * Biến xác định trạng thái của notification (ẩn hay hiện)
-     * Mặc đinh: ẩn
-     * @author CreatedBy: dbhuan (15/07/2021)
-     */
-    show: {
-      type: Boolean,
-      default: false,
-    },
   },
 
   methods: {
-    hideNotification() {
-      this.$emit("update:show", false);
+    /**
+     * Hàm thực hiện đóng notification
+     * @author CreatedBy: dbhuan (16/07/2021)
+     */
+    closeNotification() {
+      this.$emit("onClose");
     },
   },
 };

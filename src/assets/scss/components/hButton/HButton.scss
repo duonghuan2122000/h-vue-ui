@@ -6,42 +6,55 @@
  * CreatedDate: 27/06/2021
  */
 
+@use "sass:map";
+@import "../../utilities/variables";
+
 $button-class-name: "h-button" !default; // tên class cho button
 $button-border-color: #f1f1f1; // màu viền của button
 $button-border-radius: 4px; // độ bo tròn của button
 $button-padding-horizontally: 16px; // padding chiều ngang
-$button-padding-vertically: 0px;  // padding chiều dọc
+$button-padding-vertically: 0px; // padding chiều dọc
 $button-height: 40px; // chiều cao
 
-$button-primary-class-name: "is-primary"; // tên class cho button primary
-$button-primary-background-color: #00d1b2; // background color primary của button
-$button-primary-hover-background-color: #00c4a7; // background color primary khi hover của button
-$button-primary-color: #ffffff; // màu chữ primary của button
-$button-primary-hover-color: #ffffff; // màu chữ primary khi hover của button
+// màu nền của các loại button
+$button-types: (
+	"primary": $color-primary,
+	"secondary": $color-secondary,
+	"success": $color-success,
+	"warning": $color-warning,
+	"danger": $color-danger,
+);
 
-$button-danger-class-name: "is-danger"; // tên class cho button danger
-$button-danger-background-color: #f14668; // background color danger của button
-$button-danger-hover-background-color: #f03a5f; // background color danger khi hover của button
-$button-danger-color: #ffffff; // màu chữ danger của button
-$button-danger-hover-color: #ffffff; // màu chữ danger khi hover của button
-
-$button-warning-class-name: "is-warning"; // tên class cho button warning
-$button-warning-background-color: #ffe08a; // background color warning của button
-$button-warning-hover-background-color: #ffdc7d; // background color warning khi hover của button
-$button-warning-color: #ffffff; // màu chữ warning của button
-$button-warning-hover-color: #ffffff; // màu chữ warning khi hover của button
-
-$button-success-class-name: "is-success"; // tên class cho button success
-$button-success-background-color: #48c78e; // background color success của button
-$button-success-hover-background-color: #3ec487; // background color success khi hover của button
-$button-success-color: #ffffff; // màu chữ success của button
-$button-success-hover-color: #ffffff; // màu chữ success khi hover của button
+$button-hover-types: (
+	"primary": $color-hover-primary,
+	"secondary": $color-hover-secondary,
+	"success": $color-hover-success,
+	"warning": $color-hover-warning,
+	"danger": $color-hover-danger,
+);
 
 $button-secondary-class-name: "is-secondary"; // tên class cho button secondary
 $button-secondary-background-color: transparent; // background color secondary của button
 $button-secondary-hover-background-color: #f1f1f1; // background color secondary khi hover của button
 $button-secondary-color: #000; // màu chữ secondary của button
 $button-secondary-hover-color: #000; // màu chữ secondary khi hover của button
+
+@mixin button-type-mixin($types...) {
+	@for $i from 0 to length($types) {
+		&.is-#{nth($types, $i + 1)} {
+			background-color: map.get($button-types, nth($types, $i + 1));
+			color: #fff;
+
+			&:hover,
+			&:focus {
+				background-color: map.get(
+					$button-hover-types,
+					nth($types, $i + 1)
+				);
+			}
+		}
+	}
+}
 
 .#{$button-class-name} {
 	display: inline-block;
@@ -53,53 +66,13 @@ $button-secondary-hover-color: #000; // màu chữ secondary khi hover của but
 	transition: background 0.3s;
 	height: 40px;
 
-	// định nghĩa style cho button primary
-	&.#{$button-primary-class-name} {
-		background-color: $button-primary-background-color;
-		color: $button-primary-color;
-
-		&:hover,
-		&:focus {
-			background-color: $button-primary-hover-background-color;
-			color: $button-primary-hover-color;
-		}
-	}
-
-	// định nghĩa style cho button danger
-	&.#{$button-danger-class-name} {
-		background-color: $button-danger-background-color;
-		color: $button-danger-color;
-
-		&:hover,
-		&:focus {
-			background-color: $button-danger-hover-background-color;
-			color: $button-danger-hover-color;
-		}
-	}
-
-	// định nghĩa style cho button warning
-	&.#{$button-warning-class-name} {
-		background-color: $button-warning-background-color;
-		color: $button-warning-color;
-
-		&:hover,
-		&:focus {
-			background-color: $button-warning-hover-background-color;
-			color: $button-warning-hover-color;
-		}
-	}
-
-	// định nghĩa style cho button success
-	&.#{$button-success-class-name} {
-		background-color: $button-success-background-color;
-		color: $button-success-color;
-
-		&:hover,
-		&:focus {
-			background-color: $button-success-hover-background-color;
-			color: $button-success-hover-color;
-		}
-	}
+	@include button-type-mixin(
+		"primary",
+		"secondary",
+		"success",
+		"warning",
+		"danger"
+	);
 
 	// định nghĩa style cho button secondary
 	&.#{$button-secondary-class-name} {
