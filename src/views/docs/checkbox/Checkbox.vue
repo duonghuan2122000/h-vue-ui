@@ -17,19 +17,19 @@
           <td>data</td>
           <td>array</td>
           <td>null</td>
-          <td>Data list cho radio</td>
+          <td>Data list cho checkbox</td>
         </tr>
         <tr>
           <td>displayField</td>
           <td>string</td>
           <td>label</td>
-          <td>Trường dùng làm label để hiển thị cho radio</td>
+          <td>Trường dùng làm label để hiển thị cho checkbox</td>
         </tr>
         <tr>
           <td>name</td>
           <td>string</td>
           <td>string random</td>
-          <td>Trường dùng name cho radio</td>
+          <td>Trường dùng name cho checkbox</td>
         </tr>
       </tbody>
     </table>
