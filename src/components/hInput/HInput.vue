@@ -4,6 +4,8 @@
     class="h-input"
     :class="{ 'has-error': hasError }"
     :placeholder="placeholder"
+    :value="value"
+    @input="$emit('input', $event.target.value)"
   />
 </template>
 
@@ -27,6 +29,15 @@ export default {
     hasError: {
       type: Boolean,
       default: false,
+    },
+
+    /**
+     * Giá trị của input
+     * @author CreatedBy: dbhuan (17/07/2021)
+     */
+    value: {
+      type: String,
+      default: null,
     },
   },
 };

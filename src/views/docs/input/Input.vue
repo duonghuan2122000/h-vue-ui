@@ -1,11 +1,14 @@
 <template>
   <div class="p-2">
-    <h-input class="mt-1" placeholder="Text hint" />
+    <h-input class="mt-1" placeholder="Text hint" v-model="data" />
     <h-input class="mt-1" placeholder="Text hint" :hasError="true" />
 
     <pre class="my-1">
 &lt;h-input placeholder="Text hint" /&gt;
-&lt;h-input placeholder="Text hint" :hasError="true" /&gt;</pre>
+&lt;h-input placeholder="Text hint" :hasError="true" /&gt;</pre
+    >
+
+    <p>v-model: Giá trị của input</p>
 
     <table border="1">
       <thead>
@@ -39,6 +42,11 @@ import HInput from "@/components/hInput/HInput.vue";
 export default {
   components: {
     HInput,
+  },
+  data() {
+    return {
+      data: "",
+    };
   },
 };
 </script>
