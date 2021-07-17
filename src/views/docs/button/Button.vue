@@ -49,6 +49,25 @@
         </tr>
       </tbody>
     </table>
+
+    <p>Các event</p>
+
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Tên event</th>
+          <th>Tham số truyền vào</th>
+          <th>Mô tả</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>click</td>
+          <td>null</td>
+          <td>Hàm gọi khi click vào button</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </template>
 
