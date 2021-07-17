@@ -5,6 +5,7 @@
       :key="index"
       class="mx-1"
       :label="item[displayField]"
+      :name="name"
     />
   </div>
 </template>
@@ -32,6 +33,15 @@ export default {
     displayField: {
       type: String,
       default: "label",
+    },
+
+    /**
+     * Trường dùng tên cho checkbox
+     * @author CreatedBy: dbhuan (17/07/2021)
+     */
+    name: {
+      type: String,
+      default: Math.random().toString(36).replace(/\W/g, "-"),
     },
   },
 };

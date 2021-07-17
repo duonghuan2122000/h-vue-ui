@@ -35,6 +35,10 @@ export default {
       default: "label",
     },
 
+    /**
+     * Trường dùng tên cho radio
+     * @author CreatedBy: dbhuan (17/07/2021)
+     */
     name: {
       type: String,
       default: Math.random().toString(36).replace(/\W/g, "-"),
