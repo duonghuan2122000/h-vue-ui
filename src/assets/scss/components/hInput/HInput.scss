@@ -3,7 +3,6 @@
  * CreatedBy: dbhuan (01/07/2021)
  */
 
-$input-class-name: "h-input"; // tên class cho input
 $input-height: 32px; // chiều cao input
 $input-border-color: #ccc; // màu viền input
 $input-border-radius: 4px; // độ bo tròn input
@@ -13,10 +12,9 @@ $input-padding-vertically: 0px;
 
 $input-focus-border-color: #00d1b2; // màu viền của input khi focus
 
-$input-error-class-name: "has-error"; // tên class input khi lỗi.
 $input-error-border-color: #f14668; // màu viền của input khi lỗi
 
-.#{$input-class-name} {
+.h-input {
   height: $input-height;
   outline: none;
   border: 1px solid $input-border-color;
@@ -30,7 +28,7 @@ $input-error-border-color: #f14668; // màu viền của input khi lỗi
     border-color: $input-focus-border-color;
   }
 
-  &.#{$input-error-class-name} {
+  &.has-error {
     border-color: $input-error-border-color;
   }
 }

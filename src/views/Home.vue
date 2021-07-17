@@ -19,6 +19,9 @@
       <router-link to="/docs/notification">Notification</router-link>
     </div>
     <div>
+      <router-link to="/docs/dialog">Dialog</router-link>
+    </div>
+    <div>
       <router-link to="/docs/util">Util</router-link>
     </div>
   </div>

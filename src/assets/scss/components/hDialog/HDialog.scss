@@ -1,0 +1,43 @@
+/**
+ * Style cho component dialog
+ * Author: Jocelyn
+ * Email: duong.huan2122000@gmail.com
+ * Github: https://github.com/duonghuan2122000
+ * CreatedDate: 17/07/2021
+ */
+
+ .h-dialog {
+    position: fixed;
+    inset: 0 0 0 0;
+    
+    .h-dialog-background {
+        position: absolute;
+        inset: 0 0 0 0;
+        background-color: #000;
+        opacity: 0.25;
+        cursor: pointer;
+    }
+
+    .h-dialog-content {
+        width: 400px;
+        background-color: #fff;
+        z-index: 1000;
+        position: relative;
+
+        .h-dialog-close-button {
+            position: absolute;
+            inset: 0 0 auto auto;
+            font-size: 20px;
+            font-weight: bold;
+            height: 40px;
+            width: 40px;
+            border-bottom-left-radius: 4px;
+            cursor: pointer;
+            user-select: none;
+
+            &:hover {
+                background-color: #ccc;
+            }
+        }
+    }
+ }

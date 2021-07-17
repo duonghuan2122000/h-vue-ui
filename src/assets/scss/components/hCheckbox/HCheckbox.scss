@@ -3,7 +3,6 @@
  * CreatedBy: dbhuan (02/07/2021)
  */
 
-$checkbox-class-name: "h-checkbox"; // tên class cho checkbox
 $checkbox-size: 16px; // kích thước của checkbox
 $checkbox-border-radius: 4px; // bo tròn của checkbox
 $checkbox-background-color: #eee; // màu nền của checkbox
@@ -11,7 +10,7 @@ $checkbox-border-color: #ccc; // màu viền của checkbox
 $checkbox-hover-background-color: #f1f1f1; // màu nền của checkbox khi hover
 $checkbox-active-background-color: #00d1b2; // màu nên của checkbox khi active
 
-.#{$checkbox-class-name} {
+.h-checkbox {
   position: relative;
   display: inline-block;
   cursor: pointer;
