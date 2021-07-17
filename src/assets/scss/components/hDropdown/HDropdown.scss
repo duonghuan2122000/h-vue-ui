@@ -31,6 +31,7 @@ $dropdown-item-hover-color: #fff; // màu của item dropdown khi hover, focus.
     width: 100%;
     min-width: 100%;
     transition: height 0.3s;
+    background-color: #fff;
 
     .#{$dropdown-item-class-name} {
       height: $dropdown-item-height;
