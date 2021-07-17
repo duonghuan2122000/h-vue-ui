@@ -1,6 +1,6 @@
 <template>
   <div v-if="data && data.length > 0">
-    <checkbox
+    <radio
       v-for="(item, index) in data"
       :key="index"
       class="mx-1"
@@ -11,24 +11,24 @@
 </template>
 
 <script>
-import Checkbox from "./Checkbox.vue";
+import Radio from "./Radio.vue";
 export default {
-  name: "HCheckbox",
+  name: "HRadio",
   components: {
-    Checkbox,
+    Radio,
   },
   props: {
     /**
-     * Data list checkbox
-     * CreatedBy: dbhuan (02/07/2021)
+     * Data list radio
+     * @author CreatedBy: dbhuan (17/07/2021)
      */
     data: {
       type: Array,
     },
 
     /**
-     * Trường trong data dùng làm label hiển thị cho checkbox
-     * CreatedBy: dbhuan (02/07/2021)
+     * Trường trong data dùng làm label hiển thị cho radio
+     * @author CreatedBy: dbhuan (17/07/2021)
      */
     displayField: {
       type: String,
@@ -36,7 +36,7 @@ export default {
     },
 
     /**
-     * Trường dùng tên cho checkbox
+     * Trường dùng tên cho radio
      * @author CreatedBy: dbhuan (17/07/2021)
      */
     name: {

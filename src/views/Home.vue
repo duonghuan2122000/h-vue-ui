@@ -10,6 +10,9 @@
       <router-link to="/docs/checkbox">Checkbox</router-link>
     </div>
     <div>
+      <router-link to="/docs/radio">Radio</router-link>
+    </div>
+    <div>
       <router-link to="/docs/dropdown">Dropdown</router-link>
     </div>
     <div>

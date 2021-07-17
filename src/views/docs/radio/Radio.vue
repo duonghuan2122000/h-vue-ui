@@ -1,7 +1,7 @@
 <template>
   <div class="p-2">
-    <h-checkbox :data="dataCheckbox" />
-    <pre class="my-1">&lt;h-checkbox :data="dataCheckbox" /&gt;</pre>
+    <h-radio :data="dataRadio" />
+    <pre class="my-1">&lt;h-radio :data="dataRadio" /&gt;</pre>
     <p>Các props:</p>
     <table border="1">
       <thead>
@@ -17,19 +17,19 @@
           <td>data</td>
           <td>array</td>
           <td>null</td>
-          <td>Data list cho checkbox</td>
+          <td>Data list cho radio</td>
         </tr>
         <tr>
           <td>displayField</td>
           <td>string</td>
           <td>label</td>
-          <td>Trường dùng làm label để hiển thị cho checkbox</td>
+          <td>Trường dùng làm label để hiển thị cho radio</td>
         </tr>
         <tr>
           <td>name</td>
           <td>string</td>
           <td>string random</td>
-          <td>Trường dùng name cho checkbox</td>
+          <td>Trường dùng name cho radio</td>
         </tr>
       </tbody>
     </table>
@@ -37,25 +37,22 @@
 </template>
 
 <script>
-import HCheckbox from "@/components/hCheckbox/HCheckbox.vue";
+import HRadio from "@/components/hRadio/HRadio.vue";
 export default {
   components: {
-    HCheckbox,
+    HRadio,
   },
   data() {
     return {
-      dataCheckbox: [
+      dataRadio: [
         {
-          label: "Checkbox 1",
+          label: "Radio 1",
         },
         {
-          label: "Checkbox 2",
+          label: "Radio 2",
         },
         {
-          label: "Checkbox 3",
-        },
-        {
-          label: "Checkbox 4",
+          label: "Radio 3",
         },
       ],
     };

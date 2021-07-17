@@ -1,17 +1,17 @@
 <template>
-  <label class="h-checkbox flex-row is-align-items-center">
+  <label class="h-radio flex-row is-align-items-center">
     <span class="h-label">{{ label }}</span>
-    <input type="checkbox" :name="name" />
+    <input type="radio" :name="name" />
     <span class="h-checkmark"></span>
   </label>
 </template>
 
 <script>
 export default {
-  name: "Checkbox",
+  name: "Radio",
   props: {
     /**
-     * Label của checkbox
+     * Label cho radio
      * @author CreatedBy: dbhuan (17/07/2021)
      */
     label: {
@@ -19,7 +19,7 @@ export default {
     },
 
     /**
-     * Tên của checkbox
+     * Tên radio
      * @author CreatedBy: dbhuan (17/07/2021)
      */
     name: {
@@ -30,5 +30,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/scss/components/hCheckbox/HCheckbox.scss";
+@import "@/assets/scss/components/hRadio/HRadio.scss";
 </style>
