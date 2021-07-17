@@ -63,6 +63,16 @@ export default {
     },
   },
 
+  data() {
+    return {
+      /**
+       * Time out xác định khoảng thời gian hiển thị còn lại của notification
+       * @author CreatedBy: dbhuan (17/07/2021)
+       */
+      timeOut: null,
+    };
+  },
+
   methods: {
     /**
      * Hàm thực hiện đóng notification
@@ -71,6 +81,15 @@ export default {
     closeNotification() {
       this.$emit("onClose");
     },
+  },
+
+  mounted() {
+    clearTimeout(this.timeOut);
+    this.timeOut = setTimeout(this.closeNotification, this.timeToHide);
+  },
+
+  beforeDestroy() {
+    clearTimeout(this.timeOut);
   },
 };
 </script>

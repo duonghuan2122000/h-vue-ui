@@ -58,7 +58,7 @@ export default {
   },
   data() {
     return {
-      showNotification: true,
+      showNotification: false,
     };
   },
 };
