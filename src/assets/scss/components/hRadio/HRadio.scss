@@ -1,0 +1,51 @@
+/**
+ * Style cho component Radio
+ * Author: Jocelyn
+ * Email: duong.huan2122000@gmail.com
+ * Github: https://github.com/duonghuan2122000
+ * CreatedDate: 17/07/2021
+ */
+
+$radio-size: 16px; // kích thước của radio
+$radio-border-radius: 50%; // bo tròn của radio
+$radio-background-color: #eee; // màu nền của radio
+$radio-border-color: #ccc; // màu viền của radio
+$radio-hover-background-color: #f1f1f1; // màu nền của radio khi hover
+$radio-active-background-color: #00d1b2; // màu nền của radio khi active
+
+.h-radio {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+
+    .h-label {
+        margin-left: $radio-size + 4px;
+    }
+
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+
+        &:checked + .h-checkmark {
+            background-color: $radio-active-background-color;
+        }
+    }
+
+    .h-checkmark {
+        position: absolute;
+        inset: 0 auto auto 0;
+        height: $radio-size;
+        width: $radio-size;
+        border-radius: $radio-border-radius;
+        background-color: $radio-background-color;
+        border: 1px solid $radio-border-color;
+    }
+
+    &:hover .h-checkmark {
+        background-color: $radio-hover-background-color;
+    }
+}
