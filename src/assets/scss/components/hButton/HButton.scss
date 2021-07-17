@@ -9,7 +9,6 @@
 @use "sass:map";
 @import "../../utilities/variables";
 
-$button-class-name: "h-button" !default; // tên class cho button
 $button-border-color: #f1f1f1; // màu viền của button
 $button-border-radius: 4px; // độ bo tròn của button
 $button-padding-horizontally: 16px; // padding chiều ngang
@@ -33,7 +32,6 @@ $button-hover-types: (
 	"danger": $color-hover-danger,
 );
 
-$button-secondary-class-name: "is-secondary"; // tên class cho button secondary
 $button-secondary-background-color: transparent; // background color secondary của button
 $button-secondary-hover-background-color: #f1f1f1; // background color secondary khi hover của button
 $button-secondary-color: #000; // màu chữ secondary của button
@@ -56,7 +54,7 @@ $button-secondary-hover-color: #000; // màu chữ secondary khi hover của but
 	}
 }
 
-.#{$button-class-name} {
+.h-button {
 	display: inline-block;
 	border: 1px solid $button-border-color;
 	border-radius: $button-border-radius;
@@ -75,7 +73,7 @@ $button-secondary-hover-color: #000; // màu chữ secondary khi hover của but
 	);
 
 	// định nghĩa style cho button secondary
-	&.#{$button-secondary-class-name} {
+	&.is-secondary {
 		background-color: $button-secondary-background-color;
 		color: $button-secondary-color;
 		border-color: rgb(150, 150, 150);

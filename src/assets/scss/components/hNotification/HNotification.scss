@@ -7,15 +7,12 @@
  */
 @import "../../utilities/variables";
 
-$notification-class-name: "h-notification"; // tên class cho notification container
 $notification-background-color: red; // màu nền của notification
 $notification-position: 16px 16px auto auto; // vị trí của notification
 $notification-padding: 8px 12px; // padding của notification
 $notification-border-radius: 4px; // độ bo tròn của notification
 $notification-color: #fff; // màu chữ của notification
 $notification-max-width: 300px; // độ rộng tối đa của notification
-
-$notification-close-button-class-name: "h-notification-close-button"; // tên class button close notification
 
 // các loại notification
 $notification-types: (
@@ -44,7 +41,7 @@ $notification-types: (
 	}
 }
 
-.#{$notification-class-name} {
+.h-notification {
 	position: fixed;
 	inset: $notification-position;
 	padding: $notification-padding;
@@ -57,7 +54,7 @@ $notification-types: (
         &.is-#{$type} {
 			background-color: $color;
 
-			.#{$notification-close-button-class-name} {
+			.h-notification-close-button {
 				border-radius: 50%;
 				background-color: #fff;
 				height: 18px;

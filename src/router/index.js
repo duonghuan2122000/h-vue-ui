@@ -50,6 +50,12 @@ const routes = [
         component: () => import('@/views/docs/notification/Notification.vue')
       },
       {
+        // dialog component
+        path: 'dialog',
+        name: 'dialog',
+        component: () => import('@/views/docs/dialog/Dialog.vue')
+      },
+      {
         // util component
         path: "util",
         name: "util",

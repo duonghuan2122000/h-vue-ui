@@ -12,10 +12,10 @@ $tooltip-text-border-radius: 4px; // bo tròn của tooltip text
 $tooltip-text-color: #fff; // màu của tooltip text
 $tooltip-text-background-color: #000; // màu nền của tooltip text
 
-.#{$tooltip-class-name} {
+.h-tooltip {
   position: relative;
 
-  .#{$tooltip-text-class-name} {
+  .h-tooltiptext {
     display: block;
     visibility: hidden;
     white-space: nowrap;
@@ -29,7 +29,7 @@ $tooltip-text-background-color: #000; // màu nền của tooltip text
     inset: auto auto auto 0;
   }
 
-  &:hover .#{$tooltip-text-class-name} {
+  &:hover .h-tooltiptext {
     visibility: visible;
   }
 }
