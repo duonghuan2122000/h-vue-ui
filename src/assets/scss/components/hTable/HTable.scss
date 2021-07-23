@@ -1,0 +1,65 @@
+/**
+ * Style cho component table
+ * Author: Jocelyn
+ * Email: duong.huan2122000@gmail.com
+ * Github: https://github.com/duonghuan2122000
+ * CreatedDate: 23/07/2021
+ */
+
+$table-border-color: #ccc;
+$table-header-background-color: #f3f3f3;
+
+.h-table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 0 auto;
+    width: 100%;
+
+    th, td {
+        border: 1px solid $table-border-color;
+        height: 40px;
+    }
+
+    th {
+        background-color: $table-header-background-color;
+        font-weight: bold;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .h-table {
+        thead {
+            display: none;
+        }
+
+        tr{
+            border: 1px solid $table-border-color;
+            margin: 8px;
+        }
+
+        td {
+            display: block;
+            border: none;
+            position: relative;
+            padding-left: 30%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        td:before {
+            position: absolute;
+            top: 0;
+            left: 6px;
+            width: 30%;
+            padding-left: 10px;
+            white-space: nowrap;
+            content: attr(data-title);
+            font-weight: bold;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            height: 100%;
+        }
+    }
+}
